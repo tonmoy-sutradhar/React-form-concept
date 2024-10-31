@@ -1,5 +1,15 @@
+import { useState } from "react";
+
 const UseState = () => {
-  const handleSubmit = (e) => {};
+  const [name, setName] = useState(null);
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(name);
+  };
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -8,6 +18,7 @@ const UseState = () => {
         </h1>
         <div className="text-center mt-6 ">
           <input
+            onChange={handleNameChange}
             className="border-2  border-blue-600 rounded-md "
             type="text"
             name="name"
