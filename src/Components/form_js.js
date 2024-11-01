@@ -9,4 +9,8 @@
  * 4. UnContrlolled Element:
  *
  * 5. Custom hook create ,, return array & obj
+ *
+ * 6. use hook to handle states and submit and error. example react hook form
+ *
+ * 7. Reusable component.
  */
