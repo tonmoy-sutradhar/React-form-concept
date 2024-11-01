@@ -1,6 +1,6 @@
 # React Form Concept
 
-/\*\*
+/
 \*1. Use form tag and 'onsubmit' handler with event (e)
 
 - Form e access 'e.target.[name of the input field].value' and name to get values
@@ -9,7 +9,7 @@
 -
 - 3.  Controlled Element: One obj in a state holding all the input field value
 -
-- 4.  UnContrlolled Element:
+- 4.  UnControlled Element:
 -
 - 5.  Custom hook create ,, return array & obj
 -
