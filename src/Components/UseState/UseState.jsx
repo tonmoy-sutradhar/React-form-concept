@@ -2,13 +2,36 @@ import { useState } from "react";
 
 const UseState = () => {
   const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [error, setError] = useState("");
 
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    // console.log(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    // console.log(e.target.value);
+  };
+
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(name);
+    e.preventDefault(); // This is use for Page doesn't reload
+    {
+      if (error.length < 6) {
+        // console.log("Password must be more than 6 characters.");
+        setError("Password must be more than 6 characters.");
+      } else {
+        setError("");
+        console.log(name, "||", email, "||", password);
+        console.log("Submitted Done..");
+      }
+    }
   };
   return (
     <div>
@@ -18,6 +41,7 @@ const UseState = () => {
         </h1>
         <div className="text-center mt-6 ">
           <input
+            value={"Tonmoy sutradhar"}
             onChange={handleNameChange}
             className="border-2  border-blue-600 rounded-md "
             type="text"
@@ -27,6 +51,7 @@ const UseState = () => {
 
         <div className="text-center mt-6 ">
           <input
+            onChange={handleEmailChange}
             className="border-2  border-blue-600 rounded-md "
             type="email"
             name="email"
@@ -35,6 +60,8 @@ const UseState = () => {
 
         <div className="text-center mt-6 ">
           <input
+            required
+            onChange={handlePasswordChange}
             className="border-2  border-blue-600 rounded-md "
             type="password"
             name="Password"
@@ -48,6 +75,7 @@ const UseState = () => {
             type="submit"
             value="Submit"
           />
+          {error && <p>{error}</p>}
         </div>
       </form>
     </div>
