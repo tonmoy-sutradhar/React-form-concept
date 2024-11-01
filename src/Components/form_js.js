@@ -6,5 +6,7 @@
  *
  * 3. Controlled Element:  One obj in a state holding all the input field value
  *
- * 4. UnContrlolled Element: useRef to create a reference to the element and access value by using like: nameRef.current.value.
+ * 4. UnContrlolled Element:
+ *
+ * 5. Custom hook create ,, return array & obj
  */
