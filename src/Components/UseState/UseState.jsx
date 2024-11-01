@@ -41,6 +41,7 @@ const UseState = () => {
         </h1>
         <div className="text-center mt-6 ">
           <input
+            defaultValue={"abc"}
             value={"Tonmoy sutradhar"}
             onChange={handleNameChange}
             className="border-2  border-blue-600 rounded-md "
@@ -52,6 +53,7 @@ const UseState = () => {
         <div className="text-center mt-6 ">
           <input
             onChange={handleEmailChange}
+            defaultValue={"abc@gmail.com"}
             className="border-2  border-blue-600 rounded-md "
             type="email"
             name="email"
