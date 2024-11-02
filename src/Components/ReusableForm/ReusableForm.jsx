@@ -18,6 +18,7 @@ const ReusableForm = ({
     <div>
       {/* <h1 className="text-center text-xl font-bold mt-14">{formTitle}</h1> */}
       {children}
+      
 
       <form onSubmit={handleLocalSubmit}>
         <div className="text-center mt-6 ">
